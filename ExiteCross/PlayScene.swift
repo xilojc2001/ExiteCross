@@ -30,7 +30,7 @@ class PlayScene: SKScene{
     var inicialVelocityY:   CGFloat = -18.0
     var mediumVelocityY:    CGFloat = -9.0
     var sequencePath:       Int = 0
-    let delayTime:          Double = 1.5
+    let delayTime:          Double = 1.6
     
     
     //Funcion encargada de inicializar la vista y los controles de pantalla una vez la vista toma el foco
