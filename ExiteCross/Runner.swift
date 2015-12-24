@@ -34,6 +34,7 @@ class Runner {
         self.positionBaseLine = positionBaseLine
     }
     
+    //comentario de prueba
     //Establecer la posicion del corredor
     func setRunnerPosition (point: CGPoint){
         self.runnerImage.position = point
