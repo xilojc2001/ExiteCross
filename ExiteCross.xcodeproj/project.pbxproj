@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		528A08301C0B662A001CAC5B /* ControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A082F1C0B662A001CAC5B /* ControlPanel.swift */; };
+		528A08321C0B6C85001CAC5B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528A08311C0B6C85001CAC5B /* Launch Screen.storyboard */; };
 		528E424F1C03F84200FC4BB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E424E1C03F84200FC4BB9 /* AppDelegate.swift */; };
 		528E42511C03F84200FC4BB9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 528E42501C03F84200FC4BB9 /* GameScene.sks */; };
 		528E42531C03F84200FC4BB9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E42521C03F84200FC4BB9 /* GameScene.swift */; };
 		528E42551C03F84200FC4BB9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E42541C03F84200FC4BB9 /* GameViewController.swift */; };
 		528E42581C03F84200FC4BB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528E42561C03F84200FC4BB9 /* Main.storyboard */; };
 		528E425A1C03F84200FC4BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 528E42591C03F84200FC4BB9 /* Assets.xcassets */; };
-		528E425D1C03F84200FC4BB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528E425B1C03F84200FC4BB9 /* LaunchScreen.storyboard */; };
 		528E42681C03F84200FC4BB9 /* ExiteCrossTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E42671C03F84200FC4BB9 /* ExiteCrossTests.swift */; };
 		528E42731C03F84200FC4BB9 /* ExiteCrossUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E42721C03F84200FC4BB9 /* ExiteCrossUITests.swift */; };
+		528E42811C04015F00FC4BB9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E42801C04015F00FC4BB9 /* UIColorExtension.swift */; };
+		528E42831C04067200FC4BB9 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E42821C04067200FC4BB9 /* PlayScene.swift */; };
+		52A3E5B41C0B56240009E2F4 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3E5B31C0B56240009E2F4 /* Runner.swift */; };
+		52D8FA7B1C0A6AE5004A0173 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D8FA7A1C0A6AE5004A0173 /* Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		528A082F1C0B662A001CAC5B /* ControlPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlPanel.swift; sourceTree = "<group>"; };
+		528A08311C0B6C85001CAC5B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		528E424B1C03F84200FC4BB9 /* ExiteCross.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExiteCross.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		528E424E1C03F84200FC4BB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		528E42501C03F84200FC4BB9 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -43,7 +50,6 @@
 		528E42541C03F84200FC4BB9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		528E42571C03F84200FC4BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		528E42591C03F84200FC4BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		528E425C1C03F84200FC4BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		528E425E1C03F84200FC4BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		528E42631C03F84200FC4BB9 /* ExiteCrossTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExiteCrossTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		528E42671C03F84200FC4BB9 /* ExiteCrossTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExiteCrossTests.swift; sourceTree = "<group>"; };
@@ -51,6 +57,10 @@
 		528E426E1C03F84200FC4BB9 /* ExiteCrossUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExiteCrossUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		528E42721C03F84200FC4BB9 /* ExiteCrossUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExiteCrossUITests.swift; sourceTree = "<group>"; };
 		528E42741C03F84200FC4BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		528E42801C04015F00FC4BB9 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		528E42821C04067200FC4BB9 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayScene.swift; sourceTree = "<group>"; };
+		52A3E5B31C0B56240009E2F4 /* Runner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
+		52D8FA7A1C0A6AE5004A0173 /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +117,13 @@
 				528E42541C03F84200FC4BB9 /* GameViewController.swift */,
 				528E42561C03F84200FC4BB9 /* Main.storyboard */,
 				528E42591C03F84200FC4BB9 /* Assets.xcassets */,
-				528E425B1C03F84200FC4BB9 /* LaunchScreen.storyboard */,
 				528E425E1C03F84200FC4BB9 /* Info.plist */,
+				528E42801C04015F00FC4BB9 /* UIColorExtension.swift */,
+				528E42821C04067200FC4BB9 /* PlayScene.swift */,
+				52D8FA7A1C0A6AE5004A0173 /* Background.swift */,
+				52A3E5B31C0B56240009E2F4 /* Runner.swift */,
+				528A082F1C0B662A001CAC5B /* ControlPanel.swift */,
+				528A08311C0B6C85001CAC5B /* Launch Screen.storyboard */,
 			);
 			path = ExiteCross;
 			sourceTree = "<group>";
@@ -236,8 +251,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				528E42511C03F84200FC4BB9 /* GameScene.sks in Resources */,
-				528E425D1C03F84200FC4BB9 /* LaunchScreen.storyboard in Resources */,
 				528E425A1C03F84200FC4BB9 /* Assets.xcassets in Resources */,
+				528A08321C0B6C85001CAC5B /* Launch Screen.storyboard in Resources */,
 				528E42581C03F84200FC4BB9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,8 +279,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				528E42531C03F84200FC4BB9 /* GameScene.swift in Sources */,
+				528E42831C04067200FC4BB9 /* PlayScene.swift in Sources */,
 				528E42551C03F84200FC4BB9 /* GameViewController.swift in Sources */,
 				528E424F1C03F84200FC4BB9 /* AppDelegate.swift in Sources */,
+				528E42811C04015F00FC4BB9 /* UIColorExtension.swift in Sources */,
+				52D8FA7B1C0A6AE5004A0173 /* Background.swift in Sources */,
+				528A08301C0B662A001CAC5B /* ControlPanel.swift in Sources */,
+				52A3E5B41C0B56240009E2F4 /* Runner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,14 +327,6 @@
 				528E42571C03F84200FC4BB9 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		528E425B1C03F84200FC4BB9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				528E425C1C03F84200FC4BB9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -407,10 +419,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ExiteCross/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xi.ExiteCross;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -418,10 +433,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ExiteCross/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xi.ExiteCross;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -494,6 +512,7 @@
 				528E42791C03F84200FC4BB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		528E427A1C03F84200FC4BB9 /* Build configuration list for PBXNativeTarget "ExiteCrossTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +521,7 @@
 				528E427C1C03F84200FC4BB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		528E427D1C03F84200FC4BB9 /* Build configuration list for PBXNativeTarget "ExiteCrossUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +530,7 @@
 				528E427F1C03F84200FC4BB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
