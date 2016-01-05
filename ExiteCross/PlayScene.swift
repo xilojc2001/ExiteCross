@@ -32,7 +32,7 @@ class PlayScene: SKScene{
     var sequencePath:       Int = 0
     let delayTime:          Double = 1.6
     
-    //Comentario de prueba
+    //Comentario de prueba de slukad
     //Funcion encargada de inicializar la vista y los controles de pantalla una vez la vista toma el foco
     override func didMoveToView(view: SKView) {
         
