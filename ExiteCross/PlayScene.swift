@@ -61,10 +61,9 @@ class PlayScene: SKScene{
        self.runner.jumpFallingControl ()
         
        //Presentacion de los obstaculos cargados para este nivel
-       self.obstacles.moveObstacle(0, groundSpeed: background.getGroudSpeed())
-       self.obstacles.moveObstacle(1, groundSpeed: background.getGroudSpeed())
-       self.obstacles.moveObstacle(2, groundSpeed: background.getGroudSpeed())
-       self.obstacles.moveObstacle(3, groundSpeed: background.getGroudSpeed())
+        for index in 0...self.obstacles.obsImages.count-1{
+            self.obstacles.moveObstacle(index, groundSpeed: background.getGroudSpeed())
+        }
     }
     
     //Funcion encargada de mostrar los obstaculos
@@ -74,10 +73,9 @@ class PlayScene: SKScene{
         
         if playLevel == 1 {
             //Los obstaculos que aplican para esta pantalla son el 0,1,2,3 - Se adicionan las imagenes de los obstaculos a la pantalla
-            self.addChild (self.obstacles.obsImages[0].backImage)
-            self.addChild (self.obstacles.obsImages[1].backImage)
-            self.addChild (self.obstacles.obsImages[2].backImage)
-            self.addChild (self.obstacles.obsImages[3].backImage)
+            for index in 0...self.obstacles.obsImages.count-1{
+                self.addChild (self.obstacles.obsImages[index].backImage)
+            }
         }
         
     }

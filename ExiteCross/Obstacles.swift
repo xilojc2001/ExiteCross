@@ -29,6 +29,8 @@ class Obstacles {
         var Obs1 = Obstacle()
         var Obs2 = Obstacle()
         var Obs3 = Obstacle()
+        var Obs4 = Obstacle()
+        var Obs5 = Obstacle()
         
         //Configuro los obstaculos
         Obs0.backImage = SKSpriteNode (imageNamed: "ramp00")
@@ -54,23 +56,32 @@ class Obstacles {
         Obs3.positionX = Obs2.positionX + (Obs3.backImage.size.width * CGFloat(Int.random(3...6)))
         Obs3.backImage.zPosition = 50
         Obs3.backImage.position = CGPointMake(Obs3.positionX ,Obs3.positionY)
-      
+        
+        Obs4.backImage = SKSpriteNode (imageNamed: "ramp01")
+        Obs4.positionY = CGRectGetMinY (frame) + (Obs4.backImage.size.height * 1.8)
+        Obs4.positionX = Obs3.positionX + (Obs4.backImage.size.width * CGFloat(Int.random(3...6)))
+        Obs4.backImage.zPosition = 50
+        Obs4.backImage.position = CGPointMake(Obs4.positionX ,Obs4.positionY)
+        
+        Obs5.backImage = SKSpriteNode (imageNamed: "ramp00")
+        Obs5.positionY = CGRectGetMinY (frame) + (Obs5.backImage.size.height*1.52)
+        Obs5.positionX = Obs4.positionX + (Obs5.backImage.size.width * CGFloat(Int.random(3...6)))
+        Obs5.backImage.zPosition = 50
+        Obs5.backImage.position = CGPointMake(Obs5.positionX ,Obs5.positionY)
+        
         //Adiciono los obstaculos al arreglo
         obsImages.append(Obs0)
         obsImages.append(Obs1)
         obsImages.append(Obs2)
         obsImages.append(Obs3)
+        obsImages.append(Obs4)
+        obsImages.append(Obs5)
     }
     
     //Funcion que se encarga de mover el obstaculo en la pantalla
     func moveObstacle (id:Int, groundSpeed: Int){
         obsImages[id].positionX -= CGFloat (groundSpeed)
         obsImages[id].backImage.position.x -= CGFloat (groundSpeed)
-    }
-    
-    //Retorna la posicion del obstaculo de acuerdo con el ID
-    func getPosition (id:Int) -> CGPoint {
-        return CGPointMake ( obsImages[id].positionX , obsImages[id].positionY)
     }
     
 }
