@@ -13,7 +13,6 @@ class Obstacles {
     //Estructura en la que se va almacenar la infromación de los posibles obstaculos
     struct Obstacle {
         var backImage : SKSpriteNode = SKSpriteNode (imageNamed: "")
-        var lane : Int = 0
         var positionX : CGFloat = CGFloat(0)
         var positionY : CGFloat = CGFloat(0)
         
@@ -31,14 +30,12 @@ class Obstacles {
         
         //Configuro los obstaculos
         Obs0.backImage = SKSpriteNode (imageNamed: "ramp00")
-        Obs0.lane = 0 //El paramero en cero indica que ocupa los 4 carriles
         Obs0.positionY = CGRectGetMinY (frame) + (Obs0.backImage.size.height*1.52)
         Obs0.positionX = CGRectGetMaxX (frame) + (Obs0.backImage.size.width)
         Obs0.backImage.zPosition = 50
         Obs0.backImage.position = CGPointMake(Obs0.positionX ,Obs0.positionY)
         
         Obs1.backImage = SKSpriteNode (imageNamed: "ramp01")
-        Obs1.lane = 0 //El paramero en cero indica que ocupa los 4 carriles
         Obs1.positionY = CGRectGetMinY (frame) + (Obs1.backImage.size.height * 1.8)
         Obs1.positionX = CGRectGetMaxX (frame) + (Obs1.backImage.size.width * distance)
         Obs1.backImage.zPosition = 50
