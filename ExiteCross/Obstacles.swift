@@ -22,11 +22,13 @@ class Obstacles {
     var obsImages : [Obstacle] = []
     
     //Esta funcion es la que se va a encargar de inicializar el arreglo de obstaculos
-    func initObstacles(frame: CGRect, distance: CGFloat){
+    func initObstacles(frame: CGRect){
         
         //Creo los objetos para configurar los obstaculos
         var Obs0 = Obstacle()
         var Obs1 = Obstacle()
+        var Obs2 = Obstacle()
+        var Obs3 = Obstacle()
         
         //Configuro los obstaculos
         Obs0.backImage = SKSpriteNode (imageNamed: "ramp00")
@@ -37,13 +39,27 @@ class Obstacles {
         
         Obs1.backImage = SKSpriteNode (imageNamed: "ramp01")
         Obs1.positionY = CGRectGetMinY (frame) + (Obs1.backImage.size.height * 1.8)
-        Obs1.positionX = CGRectGetMaxX (frame) + (Obs1.backImage.size.width * distance)
+        Obs1.positionX = Obs0.positionX + (Obs1.backImage.size.width * CGFloat(Int.random(3...6)))
         Obs1.backImage.zPosition = 50
         Obs1.backImage.position = CGPointMake(Obs1.positionX ,Obs1.positionY)
+        
+        Obs2.backImage = SKSpriteNode (imageNamed: "ramp00")
+        Obs2.positionY = CGRectGetMinY (frame) + (Obs2.backImage.size.height*1.52)
+        Obs2.positionX = Obs1.positionX + (Obs2.backImage.size.width * CGFloat(Int.random(3...6)))
+        Obs2.backImage.zPosition = 50
+        Obs2.backImage.position = CGPointMake(Obs2.positionX ,Obs2.positionY)
+        
+        Obs3.backImage = SKSpriteNode (imageNamed: "ramp01")
+        Obs3.positionY = CGRectGetMinY (frame) + (Obs1.backImage.size.height * 1.8)
+        Obs3.positionX = Obs2.positionX + (Obs3.backImage.size.width * CGFloat(Int.random(3...6)))
+        Obs3.backImage.zPosition = 50
+        Obs3.backImage.position = CGPointMake(Obs3.positionX ,Obs3.positionY)
       
         //Adiciono los obstaculos al arreglo
         obsImages.append(Obs0)
         obsImages.append(Obs1)
+        obsImages.append(Obs2)
+        obsImages.append(Obs3)
     }
     
     //Funcion que se encarga de mover el obstaculo en la pantalla

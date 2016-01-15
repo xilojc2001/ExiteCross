@@ -63,6 +63,23 @@ class PlayScene: SKScene{
        //Presentacion de los obstaculos cargados para este nivel
        self.obstacles.moveObstacle(0, groundSpeed: background.getGroudSpeed())
        self.obstacles.moveObstacle(1, groundSpeed: background.getGroudSpeed())
+       self.obstacles.moveObstacle(2, groundSpeed: background.getGroudSpeed())
+       self.obstacles.moveObstacle(3, groundSpeed: background.getGroudSpeed())
+    }
+    
+    //Funcion encargada de mostrar los obstaculos
+    func showObstacles (playLevel: Int){
+        //Inicializa la configuración de los obstaculos
+        self.obstacles.initObstacles(self.frame)
+        
+        if playLevel == 1 {
+            //Los obstaculos que aplican para esta pantalla son el 0,1,2,3 - Se adicionan las imagenes de los obstaculos a la pantalla
+            self.addChild (self.obstacles.obsImages[0].backImage)
+            self.addChild (self.obstacles.obsImages[1].backImage)
+            self.addChild (self.obstacles.obsImages[2].backImage)
+            self.addChild (self.obstacles.obsImages[3].backImage)
+        }
+        
     }
     
     // En esta seccion se establece el comportamiento de los botones
@@ -134,20 +151,6 @@ class PlayScene: SKScene{
             }
         }
     }
-    
-    //Funcion encargada de mostrar los obstaculos
-    func showObstacles (playLevel: Int){
-        //Inicializa la configuración de los obstaculos
-        self.obstacles.initObstacles(self.frame, distance: 7)
-        
-        if playLevel == 1 {
-            //Los obstaculos que aplican para esta pantalla son el 0,1 - Se adicionan las imagenes de los obstaculos a la pantalla
-            self.addChild (self.obstacles.obsImages[0].backImage)
-            self.addChild (self.obstacles.obsImages[1].backImage)
-        }
-        
-    }
-
     
     //Funcion encargada de mostrar el fondo de juego
     func showScene (playLevel: Int, playSpeed: Int){
