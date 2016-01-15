@@ -23,6 +23,8 @@ class PlayScene: SKScene{
                                      buttonNitroImage: SKSpriteNode (imageNamed: "buttonNitro"),
                                      buttonAccelerateImage: SKSpriteNode (imageNamed: "buttonAccelerate"), pressedButton: "")
     
+    var obstacles = Obstacles ()
+    
     //Inicializa las variables generales de uso en el juego
     let regularSpeed:       Int = 7
     let nitroSpeed:         Int = 12
@@ -47,6 +49,9 @@ class PlayScene: SKScene{
         
         //Se presenta el panel de control
         showControlPanel()
+        
+        //Inicializa y muestra los obstaculos
+        showObstacles(1)
     }
     
     //Funcion encargada de las operaciones continuas de la pantalla
@@ -54,6 +59,10 @@ class PlayScene: SKScene{
        self.background.animateScene ()
        self.runner.animatedTires (background.getGroudSpeed())
        self.runner.jumpFallingControl ()
+        
+       //Presentacion de los obstaculos cargados para este nivel
+       self.obstacles.moveObstacle(0, groundSpeed: background.getGroudSpeed())
+       self.obstacles.moveObstacle(1, groundSpeed: background.getGroudSpeed())
     }
     
     // En esta seccion se establece el comportamiento de los botones
@@ -125,6 +134,20 @@ class PlayScene: SKScene{
             }
         }
     }
+    
+    //Funcion encargada de mostrar los obstaculos
+    func showObstacles (playLevel: Int){
+        //Inicializa la configuración de los obstaculos
+        self.obstacles.initObstacles(self.frame, distance: 7)
+        
+        if playLevel == 1 {
+            //Los obstaculos que aplican para esta pantalla son el 0,1 - Se adicionan las imagenes de los obstaculos a la pantalla
+            self.addChild (self.obstacles.obsImages[0].backImage)
+            self.addChild (self.obstacles.obsImages[1].backImage)
+        }
+        
+    }
+
     
     //Funcion encargada de mostrar el fondo de juego
     func showScene (playLevel: Int, playSpeed: Int){

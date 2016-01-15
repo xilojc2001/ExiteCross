@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		526F55591C486A460022B0E6 /* Obstacles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526F55581C486A460022B0E6 /* Obstacles.swift */; };
 		528A08301C0B662A001CAC5B /* ControlPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528A082F1C0B662A001CAC5B /* ControlPanel.swift */; };
 		528A08321C0B6C85001CAC5B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 528A08311C0B6C85001CAC5B /* Launch Screen.storyboard */; };
 		528E424F1C03F84200FC4BB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528E424E1C03F84200FC4BB9 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		526F55581C486A460022B0E6 /* Obstacles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obstacles.swift; sourceTree = "<group>"; };
 		528A082F1C0B662A001CAC5B /* ControlPanel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlPanel.swift; sourceTree = "<group>"; };
 		528A08311C0B6C85001CAC5B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		528E424B1C03F84200FC4BB9 /* ExiteCross.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExiteCross.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 				52A3E5B31C0B56240009E2F4 /* Runner.swift */,
 				528A082F1C0B662A001CAC5B /* ControlPanel.swift */,
 				528A08311C0B6C85001CAC5B /* Launch Screen.storyboard */,
+				526F55581C486A460022B0E6 /* Obstacles.swift */,
 			);
 			path = ExiteCross;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				528E42831C04067200FC4BB9 /* PlayScene.swift in Sources */,
 				528E42551C03F84200FC4BB9 /* GameViewController.swift in Sources */,
 				528E424F1C03F84200FC4BB9 /* AppDelegate.swift in Sources */,
+				526F55591C486A460022B0E6 /* Obstacles.swift in Sources */,
 				528E42811C04015F00FC4BB9 /* UIColorExtension.swift in Sources */,
 				52D8FA7B1C0A6AE5004A0173 /* Background.swift in Sources */,
 				528A08301C0B662A001CAC5B /* ControlPanel.swift in Sources */,

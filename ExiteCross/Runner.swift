@@ -95,6 +95,7 @@ class Runner {
     
     func setRunnerImage (node: SKSpriteNode){
         self.runnerImage = node
+        self.runnerImage.zPosition=70
     }
     
     func getRunnerImage () ->SKSpriteNode{
@@ -104,8 +105,10 @@ class Runner {
     func setTireImage (tireName: String, node: SKSpriteNode){
         if tireName == "tire1" {
             self.tire1Image = node
+            self.tire1Image.zPosition=60
         } else {
             self.tire2Image = node
+            self.tire2Image.zPosition=60
         }        
     }
     
