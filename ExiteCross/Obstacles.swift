@@ -10,78 +10,76 @@ import SpriteKit
 
 class Obstacles {
 
-    //Estructura en la que se va almacenar la infromación de los posibles obstaculos
-    struct Obstacle {
+    //Estructura que almacena la configuración base de los obsatculos
+    struct obstacleConfig {
         var backImage : SKSpriteNode = SKSpriteNode (imageNamed: "")
-        var positionX : CGFloat = CGFloat(0)
-        var positionY : CGFloat = CGFloat(0)
-        
+        var imageName : String = ""
+    }
+    
+    //Estructura en la que se va almacenar la infromación de los posibles obstaculos
+    struct obstacle {
+        var node : SKSpriteNode = SKSpriteNode (imageNamed: "")
     }
     
     //Arreglo que almacena las difentes imagenes que se van a utilizar como obstaculos
-    var obsImages : [Obstacle] = []
+    var obstaclesArray : [obstacle] = []
+    var obstaclesConfigArray : [obstacleConfig] = []
     
     //Esta funcion es la que se va a encargar de inicializar el arreglo de obstaculos
-    func initObstacles(frame: CGRect){
+    func initObstacles(frame: CGRect, playLevel: Int){
+        var obsQuantity = 0
+        
+        switch playLevel{
+            case 1: obsQuantity = 19 //Para el nivel 1 se manejan 20 obstaculos
+            default: obsQuantity = 0
+        }
+        
+        //Se adicionan 20 obstaculo a partir de los obstaculos configurados
+        for counter in 0...obsQuantity{
+            var newObs = obstacle()
+            let index : Int = Int.random(0...obstaclesConfigArray.count-1)
+            
+            newObs.node = SKSpriteNode (imageNamed: obstaclesConfigArray[index].imageName)
+            newObs.node.position.y = obstaclesConfigArray[index].backImage.position.y
+            newObs.node.zPosition = obstaclesConfigArray[index].backImage.zPosition
+            
+            if counter == 0 {
+                newObs.node.position.x = CGRectGetMaxX (frame) + obstaclesConfigArray[index].backImage.size.width
+            }else{
+                newObs.node.position.x = obstaclesArray[obstaclesArray.count-1].node.position.x + (obstaclesConfigArray[index].backImage.size.width *  CGFloat(Int.random(2...6)))
+            }
+
+            //Adiciono el obstaculo al arreglo
+            obstaclesArray.append(newObs)
+        }
+    }
+    
+    //Esta funcion es la que se va a encargar de inicializar el arreglo de obstaculos
+    func initObstaclesConfig(frame: CGRect){
         
         //Creo los objetos para configurar los obstaculos
-        var Obs0 = Obstacle()
-        var Obs1 = Obstacle()
-        var Obs2 = Obstacle()
-        var Obs3 = Obstacle()
-        var Obs4 = Obstacle()
-        var Obs5 = Obstacle()
+        var Obs0 = obstacleConfig()
+        var Obs1 = obstacleConfig()        
         
         //Configuro los obstaculos
-        Obs0.backImage = SKSpriteNode (imageNamed: "ramp00")
-        Obs0.positionY = CGRectGetMinY (frame) + (Obs0.backImage.size.height*1.52)
-        Obs0.positionX = CGRectGetMaxX (frame) + (Obs0.backImage.size.width)
+        Obs0.imageName =  "ramp00"
+        Obs0.backImage = SKSpriteNode (imageNamed: Obs0.imageName)
+        Obs0.backImage.position.y = CGRectGetMinY (frame) + (Obs0.backImage.size.height*1.52)
         Obs0.backImage.zPosition = 50
-        Obs0.backImage.position = CGPointMake(Obs0.positionX ,Obs0.positionY)
         
-        Obs1.backImage = SKSpriteNode (imageNamed: "ramp01")
-        Obs1.positionY = CGRectGetMinY (frame) + (Obs1.backImage.size.height * 1.8)
-        Obs1.positionX = Obs0.positionX + (Obs1.backImage.size.width * CGFloat(Int.random(3...6)))
+        Obs1.imageName =  "ramp01"
+        Obs1.backImage = SKSpriteNode (imageNamed: Obs1.imageName)
+        Obs1.backImage.position.y = CGRectGetMinY (frame) + (Obs1.backImage.size.height * 1.8)
         Obs1.backImage.zPosition = 50
-        Obs1.backImage.position = CGPointMake(Obs1.positionX ,Obs1.positionY)
-        
-        Obs2.backImage = SKSpriteNode (imageNamed: "ramp00")
-        Obs2.positionY = CGRectGetMinY (frame) + (Obs2.backImage.size.height*1.52)
-        Obs2.positionX = Obs1.positionX + (Obs2.backImage.size.width * CGFloat(Int.random(3...6)))
-        Obs2.backImage.zPosition = 50
-        Obs2.backImage.position = CGPointMake(Obs2.positionX ,Obs2.positionY)
-        
-        Obs3.backImage = SKSpriteNode (imageNamed: "ramp01")
-        Obs3.positionY = CGRectGetMinY (frame) + (Obs1.backImage.size.height * 1.8)
-        Obs3.positionX = Obs2.positionX + (Obs3.backImage.size.width * CGFloat(Int.random(3...6)))
-        Obs3.backImage.zPosition = 50
-        Obs3.backImage.position = CGPointMake(Obs3.positionX ,Obs3.positionY)
-        
-        Obs4.backImage = SKSpriteNode (imageNamed: "ramp01")
-        Obs4.positionY = CGRectGetMinY (frame) + (Obs4.backImage.size.height * 1.8)
-        Obs4.positionX = Obs3.positionX + (Obs4.backImage.size.width * CGFloat(Int.random(3...6)))
-        Obs4.backImage.zPosition = 50
-        Obs4.backImage.position = CGPointMake(Obs4.positionX ,Obs4.positionY)
-        
-        Obs5.backImage = SKSpriteNode (imageNamed: "ramp00")
-        Obs5.positionY = CGRectGetMinY (frame) + (Obs5.backImage.size.height*1.52)
-        Obs5.positionX = Obs4.positionX + (Obs5.backImage.size.width * CGFloat(Int.random(3...6)))
-        Obs5.backImage.zPosition = 50
-        Obs5.backImage.position = CGPointMake(Obs5.positionX ,Obs5.positionY)
         
         //Adiciono los obstaculos al arreglo
-        obsImages.append(Obs0)
-        obsImages.append(Obs1)
-        obsImages.append(Obs2)
-        obsImages.append(Obs3)
-        obsImages.append(Obs4)
-        obsImages.append(Obs5)
+        obstaclesConfigArray.append(Obs0)
+        obstaclesConfigArray.append(Obs1)
     }
     
     //Funcion que se encarga de mover el obstaculo en la pantalla
     func moveObstacle (id:Int, groundSpeed: Int){
-        obsImages[id].positionX -= CGFloat (groundSpeed)
-        obsImages[id].backImage.position.x -= CGFloat (groundSpeed)
+        obstaclesArray[id].node.position.x -= CGFloat (groundSpeed)
     }
     
 }
